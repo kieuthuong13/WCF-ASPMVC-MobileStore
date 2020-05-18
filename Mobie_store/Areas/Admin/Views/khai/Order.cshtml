@@ -1,0 +1,70 @@
+﻿
+@model IEnumerable<Mobie_store.ViewService.order>
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Areas/Admin/Views/Shared/Layout/_Dashboard.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-icon" data-background-color="purple">
+                <i class="material-icons">assignment</i>
+            </div>
+            <div class="card-content">
+                <h4 class="card-title">Order DataTables</h4>
+                <div class="toolbar">
+                    <!--        Here you can write extra buttons/actions for the toolbar              -->
+                </div>
+                <div class="material-datatables">
+                    <table id="cateTable" class="table table-striped table-no-bordered table-hover datatables" cellspacing="0" width="100%" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Stt Order</th>
+                                <th>User id</th>
+                                <th>Total money</th>
+                                <th>Date created</th>
+                                <th>Method</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Stt Order</th>
+                                <th>User id</th>
+                                <th>Total money</th>
+                                <th>Date created</th>
+                                <th>Method</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var cate in Model)
+                            {
+                                DateTime tam = (DateTime)cate.date_create;
+                                string status = cate.status == 1 ? "Đang vận chuyển" : "Chưa vận chuyển/Đã nhận";
+                                <tr class="row_@cate.id">
+                                    <td>@cate.id</td>
+                                    <td>@cate.users_id</td>
+                                    <td>@cate.total_money</td>
+
+                                    <td>@tam.ToLongDateString()</td>
+                                    <td>@cate.method</td>
+                                    <td>@status</td>
+                                    <td>
+                                        <a href="#" class="btn btn-simple btn-info btn-icon edit_cate" data-id="@cate.id"><i class="material-icons">create</a>
+                                        <a href="/Admin/khai/DeleteOrder/@cate.id" class="btn btn-simple btn-info btn-icon" data-id="@cate.id"><i class="material-icons">clear</i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- end content-->
+        </div>
+        <!--  end card  -->
+    </div>
+    <!-- end col-md-12 -->
+</div>

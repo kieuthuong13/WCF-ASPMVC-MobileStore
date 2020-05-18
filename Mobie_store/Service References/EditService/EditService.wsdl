@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EditService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58365/api/EditService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58365/api/EditService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEditService_Edit_admin_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_admin" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_admin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_adminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_category_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_category" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_category_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_categoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_comment_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_comment" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_comment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_commentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_discount_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_discount" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_discount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_discountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_image_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_image" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_image_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_imageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_post_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_post" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_post_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_postResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_product_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_product" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_product_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_productResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_review_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_review" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_review_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_reviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_user_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_user" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_user_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_userResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_token_InputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_token" />
+  </wsdl:message>
+  <wsdl:message name="IEditService_Edit_token_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Edit_tokenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEditService">
+    <wsdl:operation name="Edit_admin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEditService/Edit_admin" message="tns:IEditService_Edit_admin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEditService/Edit_adminResponse" message="tns:IEditService_Edit_admin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_category">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEditService/Edit_category" message="tns:IEditService_Edit_category_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEditService/Edit_categoryResponse" message="tns:IEditService_Edit_category_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_comment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEditService/Edit_comment" message="tns:IEditService_Edit_comment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEditService/Edit_commentResponse" message="tns:IEditService_Edit_comment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_discount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEditService/Edit_discount" message="tns:IEditService_Edit_discount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEditService/Edit_discountResponse" message="tns:IEditService_Edit_discount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_image">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEditService/Edit_image" message="tns:IEditService_Edit_image_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEditService/Edit_imageResponse" message="tns:IEditService_Edit_image_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_post">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEditService/Edit_post" message="tns:IEditService_Edit_post_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEditService/Edit_postResponse" message="tns:IEditService_Edit_post_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_product">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEditService/Edit_product" message="tns:IEditService_Edit_product_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEditService/Edit_productResponse" message="tns:IEditService_Edit_product_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_review">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEditService/Edit_review" message="tns:IEditService_Edit_review_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEditService/Edit_reviewResponse" message="tns:IEditService_Edit_review_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_user">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEditService/Edit_user" message="tns:IEditService_Edit_user_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEditService/Edit_userResponse" message="tns:IEditService_Edit_user_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Edit_token">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEditService/Edit_token" message="tns:IEditService_Edit_token_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEditService/Edit_tokenResponse" message="tns:IEditService_Edit_token_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEditService" type="tns:IEditService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Edit_admin">
+      <soap:operation soapAction="http://tempuri.org/IEditService/Edit_admin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_category">
+      <soap:operation soapAction="http://tempuri.org/IEditService/Edit_category" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_comment">
+      <soap:operation soapAction="http://tempuri.org/IEditService/Edit_comment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_discount">
+      <soap:operation soapAction="http://tempuri.org/IEditService/Edit_discount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_image">
+      <soap:operation soapAction="http://tempuri.org/IEditService/Edit_image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_post">
+      <soap:operation soapAction="http://tempuri.org/IEditService/Edit_post" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_product">
+      <soap:operation soapAction="http://tempuri.org/IEditService/Edit_product" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_review">
+      <soap:operation soapAction="http://tempuri.org/IEditService/Edit_review" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_user">
+      <soap:operation soapAction="http://tempuri.org/IEditService/Edit_user" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Edit_token">
+      <soap:operation soapAction="http://tempuri.org/IEditService/Edit_token" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EditService">
+    <wsdl:port name="BasicHttpBinding_IEditService" binding="tns:BasicHttpBinding_IEditService">
+      <soap:address location="http://localhost:58365/api/EditService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

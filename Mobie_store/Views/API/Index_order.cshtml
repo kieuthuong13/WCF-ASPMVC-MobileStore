@@ -1,0 +1,18 @@
+﻿
+@model Mobie_store.ViewService.order[]
+@{
+    ViewBag.Title = "Indexorder";
+    Layout = "~/Views/Shared/Layouts/_Service.cshtml";
+}
+
+<h2>Indexorder</h2>
+
+@foreach (var item in Model)
+{
+    @item.id<br />
+    @item.users_id<br />
+    @item.total_money<br />
+    @item.date_create<br />
+    @item.method<br />
+    <p>_______________________________</p>
+}

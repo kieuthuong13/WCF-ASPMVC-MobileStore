@@ -1,0 +1,17 @@
+﻿
+@model Mobie_store.ViewService.post[]
+@{
+    ViewBag.Title = "Indexpost";
+    Layout = "~/Views/Shared/Layouts/_Service.cshtml";
+}
+
+<h2>Indexpost</h2>
+
+@foreach (var item in Model)
+{
+    @item.id<br />
+    @item.product_id<br />
+    @item.name<br />
+    @item.descripton<br />
+    <p>_______________________________</p>
+}

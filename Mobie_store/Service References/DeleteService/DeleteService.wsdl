@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DeleteService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58365/api/DeleteService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58365/api/DeleteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDeleteService_Delete_admin_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_admin" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_admin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_adminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_category_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_category" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_category_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_categoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_comment_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_comment" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_comment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_commentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_discount_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_discount" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_discount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_discountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_image_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_image" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_image_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_imageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_order_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_order" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_order_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_orderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_post_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_post" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_post_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_postResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_product_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_product" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_product_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_productResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_review_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_review" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_review_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_reviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_user_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_user" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_user_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_userResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_token_InputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_token" />
+  </wsdl:message>
+  <wsdl:message name="IDeleteService_Delete_token_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Delete_tokenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IDeleteService">
+    <wsdl:operation name="Delete_admin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeleteService/Delete_admin" message="tns:IDeleteService_Delete_admin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeleteService/Delete_adminResponse" message="tns:IDeleteService_Delete_admin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_category">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeleteService/Delete_category" message="tns:IDeleteService_Delete_category_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeleteService/Delete_categoryResponse" message="tns:IDeleteService_Delete_category_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_comment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeleteService/Delete_comment" message="tns:IDeleteService_Delete_comment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeleteService/Delete_commentResponse" message="tns:IDeleteService_Delete_comment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_discount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeleteService/Delete_discount" message="tns:IDeleteService_Delete_discount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeleteService/Delete_discountResponse" message="tns:IDeleteService_Delete_discount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_image">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeleteService/Delete_image" message="tns:IDeleteService_Delete_image_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeleteService/Delete_imageResponse" message="tns:IDeleteService_Delete_image_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_order">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeleteService/Delete_order" message="tns:IDeleteService_Delete_order_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeleteService/Delete_orderResponse" message="tns:IDeleteService_Delete_order_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_post">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeleteService/Delete_post" message="tns:IDeleteService_Delete_post_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeleteService/Delete_postResponse" message="tns:IDeleteService_Delete_post_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_product">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeleteService/Delete_product" message="tns:IDeleteService_Delete_product_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeleteService/Delete_productResponse" message="tns:IDeleteService_Delete_product_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_review">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeleteService/Delete_review" message="tns:IDeleteService_Delete_review_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeleteService/Delete_reviewResponse" message="tns:IDeleteService_Delete_review_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_user">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeleteService/Delete_user" message="tns:IDeleteService_Delete_user_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeleteService/Delete_userResponse" message="tns:IDeleteService_Delete_user_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete_token">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeleteService/Delete_token" message="tns:IDeleteService_Delete_token_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeleteService/Delete_tokenResponse" message="tns:IDeleteService_Delete_token_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IDeleteService" type="tns:IDeleteService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Delete_admin">
+      <soap:operation soapAction="http://tempuri.org/IDeleteService/Delete_admin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_category">
+      <soap:operation soapAction="http://tempuri.org/IDeleteService/Delete_category" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_comment">
+      <soap:operation soapAction="http://tempuri.org/IDeleteService/Delete_comment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_discount">
+      <soap:operation soapAction="http://tempuri.org/IDeleteService/Delete_discount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_image">
+      <soap:operation soapAction="http://tempuri.org/IDeleteService/Delete_image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_order">
+      <soap:operation soapAction="http://tempuri.org/IDeleteService/Delete_order" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_post">
+      <soap:operation soapAction="http://tempuri.org/IDeleteService/Delete_post" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_product">
+      <soap:operation soapAction="http://tempuri.org/IDeleteService/Delete_product" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_review">
+      <soap:operation soapAction="http://tempuri.org/IDeleteService/Delete_review" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_user">
+      <soap:operation soapAction="http://tempuri.org/IDeleteService/Delete_user" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete_token">
+      <soap:operation soapAction="http://tempuri.org/IDeleteService/Delete_token" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DeleteService">
+    <wsdl:port name="BasicHttpBinding_IDeleteService" binding="tns:BasicHttpBinding_IDeleteService">
+      <soap:address location="http://localhost:58365/api/DeleteService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

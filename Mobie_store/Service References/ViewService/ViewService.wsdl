@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ViewService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58365/api/ViewService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58365/api/ViewService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58365/api/ViewService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MyWCFService.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IViewService_Get_admin_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_admin" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_admin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_adminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_category_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_category" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_category_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_categoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_comment_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_comment" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_comment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_commentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_discount_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_discount" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_discount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_discountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_image_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_image" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_image_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_imageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_order_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_order" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_order_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_orderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_post_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_post" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_post_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_postResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_product_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_product" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_product_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_productResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_review_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_review" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_review_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_reviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_user_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_user" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_user_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_userResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_token_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_token" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_token_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_tokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_utoken_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_utoken" />
+  </wsdl:message>
+  <wsdl:message name="IViewService_Get_utoken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_utokenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IViewService">
+    <wsdl:operation name="Get_admin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_admin" message="tns:IViewService_Get_admin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_adminResponse" message="tns:IViewService_Get_admin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_category">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_category" message="tns:IViewService_Get_category_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_categoryResponse" message="tns:IViewService_Get_category_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_comment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_comment" message="tns:IViewService_Get_comment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_commentResponse" message="tns:IViewService_Get_comment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_discount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_discount" message="tns:IViewService_Get_discount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_discountResponse" message="tns:IViewService_Get_discount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_image">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_image" message="tns:IViewService_Get_image_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_imageResponse" message="tns:IViewService_Get_image_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_order">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_order" message="tns:IViewService_Get_order_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_orderResponse" message="tns:IViewService_Get_order_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_post">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_post" message="tns:IViewService_Get_post_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_postResponse" message="tns:IViewService_Get_post_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_product">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_product" message="tns:IViewService_Get_product_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_productResponse" message="tns:IViewService_Get_product_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_review">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_review" message="tns:IViewService_Get_review_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_reviewResponse" message="tns:IViewService_Get_review_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_user">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_user" message="tns:IViewService_Get_user_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_userResponse" message="tns:IViewService_Get_user_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_token">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_token" message="tns:IViewService_Get_token_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_tokenResponse" message="tns:IViewService_Get_token_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_utoken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IViewService/Get_utoken" message="tns:IViewService_Get_utoken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IViewService/Get_utokenResponse" message="tns:IViewService_Get_utoken_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IViewService" type="tns:IViewService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_admin">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_admin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_category">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_category" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_comment">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_comment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_discount">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_discount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_image">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_image" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_order">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_order" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_post">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_post" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_product">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_product" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_review">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_review" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_user">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_user" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_token">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_token" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_utoken">
+      <soap:operation soapAction="http://tempuri.org/IViewService/Get_utoken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ViewService">
+    <wsdl:port name="BasicHttpBinding_IViewService" binding="tns:BasicHttpBinding_IViewService">
+      <soap:address location="http://localhost:58365/api/ViewService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

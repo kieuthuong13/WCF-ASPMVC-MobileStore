@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MyWCFService.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MyWCFService.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfadmin">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="admin" nillable="true" type="tns:admin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfadmin" nillable="true" type="tns:ArrayOfadmin" />
+  <xs:complexType name="admin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fullname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="level" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="admin" nillable="true" type="tns:admin" />
+  <xs:complexType name="ArrayOfcategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="category" nillable="true" type="tns:category" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcategory" nillable="true" type="tns:ArrayOfcategory" />
+  <xs:complexType name="category">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="category" nillable="true" type="tns:category" />
+  <xs:complexType name="ArrayOfcomment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="comment" nillable="true" type="tns:comment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfcomment" nillable="true" type="tns:ArrayOfcomment" />
+  <xs:complexType name="comment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="product_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="users_id" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="comment" nillable="true" type="tns:comment" />
+  <xs:complexType name="ArrayOfdiscount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="discount" nillable="true" type="tns:discount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdiscount" nillable="true" type="tns:ArrayOfdiscount" />
+  <xs:complexType name="discount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="discount" nillable="true" type="tns:discount" />
+  <xs:complexType name="ArrayOfimage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="image" nillable="true" type="tns:image" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfimage" nillable="true" type="tns:ArrayOfimage" />
+  <xs:complexType name="image">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="product_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="image" nillable="true" type="tns:image" />
+  <xs:complexType name="ArrayOforder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="order" nillable="true" type="tns:order" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOforder" nillable="true" type="tns:ArrayOforder" />
+  <xs:complexType name="order">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date_create" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="method" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="total_money" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="users_id" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="order" nillable="true" type="tns:order" />
+  <xs:complexType name="ArrayOfpost">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="post" nillable="true" type="tns:post" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfpost" nillable="true" type="tns:ArrayOfpost" />
+  <xs:complexType name="post">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripton" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="product_id" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="post" nillable="true" type="tns:post" />
+  <xs:complexType name="ArrayOfproduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="product" nillable="true" type="tns:product" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfproduct" nillable="true" type="tns:ArrayOfproduct" />
+  <xs:complexType name="product">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ghz" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="activate" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="battery" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="camera_front" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="camera_rear" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cpu" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="discount_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="display" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="follow" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="price" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="product_cate_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ram" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sensor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sim" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sku" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="storage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="product" nillable="true" type="tns:product" />
+  <xs:complexType name="ArrayOfreview">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="review" nillable="true" type="tns:review" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfreview" nillable="true" type="tns:ArrayOfreview" />
+  <xs:complexType name="review">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="product_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="reviews" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="users_id" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="review" nillable="true" type="tns:review" />
+  <xs:complexType name="ArrayOfuser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="user" nillable="true" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfuser" nillable="true" type="tns:ArrayOfuser" />
+  <xs:complexType name="user">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activated" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fullname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pwd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="user" nillable="true" type="tns:user" />
+  <xs:complexType name="ArrayOftoken">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="token" nillable="true" type="tns:token" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOftoken" nillable="true" type="tns:ArrayOftoken" />
+  <xs:complexType name="token">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="admin_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="token" nillable="true" type="tns:token" />
+  <xs:complexType name="ArrayOfutoken">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="utoken" nillable="true" type="tns:utoken" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfutoken" nillable="true" type="tns:ArrayOfutoken" />
+  <xs:complexType name="utoken">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="utoken" nillable="true" type="tns:utoken" />
+</xs:schema>

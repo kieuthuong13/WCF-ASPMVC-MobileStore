@@ -1,0 +1,16 @@
+﻿
+@model Mobie_store.ViewService.category[]
+@{
+    ViewBag.Title = "Indexcategory";
+    Layout = "~/Views/Shared/Layouts/_Service.cshtml";
+}
+
+<h2>Indexcategory</h2>
+
+@foreach (var item in Model)
+{
+    @item.id<br />
+    @item.name<br />
+    @item.description<br />
+    <p>_______________________________</p>
+}

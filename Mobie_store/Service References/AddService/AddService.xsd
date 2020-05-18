@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ID_Return">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nametable" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ID_ReturnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ID_ReturnResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_admin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="admin_id" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="_username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_phone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_level" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="_image" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_fullname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_adminResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_adminResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_category">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="admin_id" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_description" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_categoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_categoryResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_comment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="utoken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_user_id" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="_product_id" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="_comments" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_commentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_commentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_discount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="admin_id" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="_value" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_discountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_discountResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_image">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="admin_id" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="_url" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_product_id" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_imageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_imageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_order">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="utoken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_user_id" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="_total_money" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_date_create" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_method" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_orderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_orderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_order_detail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="utoken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_user_id" type="xs:int" />
+        <xs:element minOccurs="0" name="_order_id" type="xs:int" />
+        <xs:element minOccurs="0" name="_product_id" type="xs:int" />
+        <xs:element minOccurs="0" name="_quantity" type="xs:int" />
+        <xs:element minOccurs="0" name="_money" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_order_detailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_order_detailResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_post">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="admin_id" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="_product_id" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_descripton" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_postResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_postResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_product">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="admin_id" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="_sku" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_price" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_Ghz" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_color" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_sensor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_cpu" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ram" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_storage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_camera_front" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_camera_rear" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_battery" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_display" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_sim" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_activate" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="_product_cate_id" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="_discount_id" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="_image" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_productResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_productResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_review">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="utoken" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_user_id" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="_product_id" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="_reviews" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_reviewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_reviewResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_user">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element minOccurs="0" name="_username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_fullname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_pwd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_phone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_image" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_activated" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Add_userResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Add_userResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

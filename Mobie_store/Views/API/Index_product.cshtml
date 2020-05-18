@@ -1,0 +1,33 @@
+﻿
+@model Mobie_store.ViewService.product[]
+@{
+    ViewBag.Title = "Indexproduct";
+    Layout = "~/Views/Shared/Layouts/_Service.cshtml";
+}
+
+<h2>Indexproduct</h2>
+
+@foreach (var item in Model)
+{
+    @item.id<br />
+    @item.sku<br />
+    @item.name<br />
+    @item.price<br />
+    @item.Ghz<br />
+    @item.color<br />
+    @item.sensor<br />
+    @item.cpu<br />
+    @item.ram<br />
+    @item.storage<br />
+    @item.camera_front<br />
+    @item.camera_rear<br />
+    @item.battery<br />
+    @item.display<br />
+    @item.sim<br />
+    @item.status<br />
+    @item.activate<br />
+    @item.product_cate_id<br />
+    @item.discount_id<br />
+    @item.image<br />
+    <p>_______________________________</p>
+}

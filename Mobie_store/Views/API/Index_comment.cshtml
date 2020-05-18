@@ -1,0 +1,17 @@
+﻿
+@model Mobie_store.ViewService.comment[]
+@{
+    ViewBag.Title = "Indexcomment";
+    Layout = "~/Views/Shared/Layouts/_Service.cshtml";
+}
+
+<h2>Indexcomment</h2>
+
+@foreach (var item in Model)
+{
+    @item.id<br />
+    @item.product_id<br />
+    @item.users_id<br />
+    @item.comments<br />
+    <p>_______________________________</p>
+}

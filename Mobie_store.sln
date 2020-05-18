@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobie_store", "Mobie_store\Mobie_store.csproj", "{6F5CF68B-5F6D-474A-943C-19CE153E892F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{57BA600E-9BE9-49C8-A66E-DD076605C830} = {57BA600E-9BE9-49C8-A66E-DD076605C830}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWCFService", "MyWCFService\MyWCFService.csproj", "{57BA600E-9BE9-49C8-A66E-DD076605C830}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F5CF68B-5F6D-474A-943C-19CE153E892F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F5CF68B-5F6D-474A-943C-19CE153E892F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F5CF68B-5F6D-474A-943C-19CE153E892F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F5CF68B-5F6D-474A-943C-19CE153E892F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57BA600E-9BE9-49C8-A66E-DD076605C830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57BA600E-9BE9-49C8-A66E-DD076605C830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57BA600E-9BE9-49C8-A66E-DD076605C830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57BA600E-9BE9-49C8-A66E-DD076605C830}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE9CBABA-C01A-4016-8DD0-CD6D0B73EF98}
+	EndGlobalSection
+EndGlobal

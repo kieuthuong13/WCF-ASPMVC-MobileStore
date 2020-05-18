@@ -1,0 +1,16 @@
+﻿
+@model Mobie_store.ViewService.discount[]
+@{
+    ViewBag.Title = "Indexdiscount";
+    Layout = "~/Views/Shared/Layouts/_Service.cshtml";
+}
+
+<h2>Indexdiscount</h2>
+
+@foreach (var item in Model)
+{
+    @item.id<br />
+    @item.value<br />
+    @item.name<br />
+    <p>_______________________________</p>
+}

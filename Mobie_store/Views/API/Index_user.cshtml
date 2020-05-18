@@ -1,0 +1,22 @@
+﻿
+@model Mobie_store.ViewService.user[]
+@{
+    ViewBag.Title = "Indexuser";
+    Layout = "~/Views/Shared/Layouts/_Service.cshtml";
+}
+
+<h2>Indexuser</h2>
+
+@foreach (var item in Model)
+{
+    @item.id<br />
+    @item.username<br />
+    @item.fullname<br />
+    @item.pwd<br />
+    @item.email<br />
+    @item.address<br />
+    @item.phone<br />
+    @item.image<br />
+    @item.activated<br />
+    <p>_______________________________</p>
+}

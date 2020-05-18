@@ -1,0 +1,16 @@
+﻿
+@model Mobie_store.ViewService.image[]
+@{
+    ViewBag.Title = "Indeximage";
+    Layout = "~/Views/Shared/Layouts/_Service.cshtml";
+}
+
+<h2>Indeximage</h2>
+
+@foreach (var item in Model)
+{
+    @item.id<br />
+    @item.url<br />
+    @item.product_id<br />
+    <p>_______________________________</p>
+}

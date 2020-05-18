@@ -1,0 +1,16 @@
+﻿
+@model Mobie_store.ViewService.token[]
+@{
+    ViewBag.Title = "Indextoken";
+    Layout = "~/Views/Shared/Layouts/_Service.cshtml";
+}
+
+<h2>Indextoken</h2>
+
+@foreach (var item in Model)
+{
+    @item.id<br />
+    @item.value<br />
+    @item.admin_id<br />
+    <p>_______________________________</p>
+}
