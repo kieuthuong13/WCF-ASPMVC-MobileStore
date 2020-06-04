@@ -20,7 +20,7 @@ namespace Mobie_store.Models.Function
             string price = null;
             foreach (char item in prAdd.price)
             {
-                if (item != '.')
+                if ((int)item >= (int)'0' && (int)item <= (int)'9')
                 {
                     price += item;
                 }

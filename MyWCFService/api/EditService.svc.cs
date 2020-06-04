@@ -13,7 +13,7 @@ namespace MyWCFService.api
     // NOTE: In order to launch WCF Test Client for testing this service, please select EditService.svc or EditService.svc.cs at the Solution Explorer and start debugging.
     public class EditService : IEditService
     {
-        private static DbStore db = new DbStore();
+        private static dbContext db = new dbContext();
         public string Edit_admin(string token, int admin_id, int id, string _username = null, string _pwd = null, string _email = null, string _address = null, string _phone = null, int? _level = null, string _image = null, string _fullname = null)
         {
             try
@@ -142,29 +142,29 @@ namespace MyWCFService.api
             return "Edit failed!";
         }
 
-        //public string Edit_order(string utoken, int user_id, int id, string _total_money = null, string _date_create = null, string _method = null)
-        //{
-        //    try
-        //    {
-        //        if (db.utokens.Where(m => m.user_id.Equals(user_id) && m.value.Equals(utoken)) != null)
-        //        {
-        //            var record = db.orders.Where(m => m.id == id).FirstOrDefault();
-        //            record.users_id = _user_id ?? record.users_id;
-        //            record.total_money = _total_money ?? record.total_money;
-        //            record.date_create = string.IsNullOrWhiteSpace(_date_create) ? record.date_create : DateTime.Parse(_date_create);
-        //            record.method = _method ?? record.method;
+        public string Edit_order(string utoken, int user_id, int id, string _total_money = null, string _date_create = null, string _method = null)
+        {
+            try
+            {
+                if (db.utokens.Where(m => m.user_id.Equals(user_id) && m.value.Equals(utoken)) != null)
+                {
+                    var record = db.orders.Where(m => m.id == id).FirstOrDefault();
+                    record.users_id = user_id;
+                    record.total_money = _total_money ?? record.total_money;
+                    record.date_create = string.IsNullOrWhiteSpace(_date_create) ? record.date_create : DateTime.Parse(_date_create);
+                    record.method = _method ?? record.method;
 
-        //            db.orders.AddOrUpdate(record);
-        //            db.SaveChanges();
-        //            return "Edit success!";
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return "Edit failed!";
-        //    }
-        //    return "Edit failed!";
-        //}
+                    db.orders.AddOrUpdate(record);
+                    db.SaveChanges();
+                    return "Edit success!";
+                }
+            }
+            catch (Exception)
+            {
+                return "Edit failed!";
+            }
+            return "Edit failed!";
+        }
 
         public string Edit_post(string token, int admin_id, int id, int? _product_id = null, string _name = null, string _descripton = null)
         {

@@ -421,12 +421,12 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <None Include="Service References\AddService\AddService.wsdl" />
-    <None Include="Service References\AddService\AddService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\AddService\AddService1.xsd">
-      <SubType>Designer</SubType>
+    <None Include="Service References\AddService\AddService.disco" />
+    <None Include="Service References\AddService\configuration91.svcinfo" />
+    <None Include="Service References\AddService\configuration.svcinfo" />
+    <None Include="Service References\AddService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Service References\DeleteService\DeleteService.disco" />
     <None Include="Service References\DeleteService\configuration91.svcinfo" />
@@ -439,13 +439,6 @@
     <None Include="Service References\EditService\configuration91.svcinfo" />
     <None Include="Service References\EditService\configuration.svcinfo" />
     <None Include="Service References\EditService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\AddService\AddService.disco" />
-    <None Include="Service References\AddService\configuration91.svcinfo" />
-    <None Include="Service References\AddService\configuration.svcinfo" />
-    <None Include="Service References\AddService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -498,13 +491,6 @@
     <Content Include="Service References\ViewService\Mobie_store.ViewService.utoken.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\LoginService\LoginService.wsdl" />
-    <None Include="Service References\LoginService\LoginService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\LoginService\LoginService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\ViewService\ViewService.disco" />
     <None Include="Service References\ViewService\configuration91.svcinfo" />
     <None Include="Service References\ViewService\configuration.svcinfo" />
@@ -561,6 +547,13 @@
     <Content Include="Views\Shared\Layouts\_Service.cshtml" />
     <Content Include="Views\API\Index_utoken.cshtml" />
     <Content Include="Views\API\Index_token.cshtml" />
+    <None Include="Service References\AddService\AddService.wsdl" />
+    <None Include="Service References\AddService\AddService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AddService\AddService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\DeleteService\DeleteService.wsdl" />
     <None Include="Service References\DeleteService\DeleteService.xsd">
       <SubType>Designer</SubType>
@@ -573,6 +566,13 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\EditService\EditService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LoginService\LoginService.wsdl" />
+    <None Include="Service References\LoginService\LoginService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LoginService\LoginService1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ViewService\ViewService.wsdl" />
@@ -602,14 +602,14 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Service References\AddService\" />
     <WCFMetadataStorage Include="Service References\DeleteService\" />
     <WCFMetadataStorage Include="Service References\EditService\" />
     <WCFMetadataStorage Include="Service References\LoginService\" />
     <WCFMetadataStorage Include="Service References\ViewService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

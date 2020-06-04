@@ -161,7 +161,7 @@ namespace Mobie_store.Controllers
                         cardt = gio.getCartDetailList();
 
                         // Nếu thanh toán thành công thì trả về view();
-                        int nextIDOrder = addSV.ID_Return("orders");
+                        int nextIDOrder = addSV.ID_Return("order");
                         if (addSV.Add_order(
                                 Session["utoken"] as string,
                                 userorder.id,

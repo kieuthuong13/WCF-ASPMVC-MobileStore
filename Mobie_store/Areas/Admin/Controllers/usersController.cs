@@ -49,7 +49,7 @@ namespace Mobie_store.Areas.Admin.Controllers
 
                     var pwd = Hash.EncMD5(obj.pwd);
                     addSV.Add_user(
-                        addSV.ID_Return("users"),
+                        addSV.ID_Return("user"),
                         obj.username,
                         obj.fullname,
                         pwd,
@@ -111,7 +111,7 @@ namespace Mobie_store.Areas.Admin.Controllers
             return st;
         }
 
-        public bool delete(int id)
+        private bool delete(int id)
         {
             deleteSV.Delete_user(
                 Session["token"] as string,

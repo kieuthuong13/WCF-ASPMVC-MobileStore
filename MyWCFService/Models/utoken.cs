@@ -1,4 +1,4 @@
-﻿namespace MyWCFService.Models
+namespace MyWCFService.Models
 {
     using System;
     using System.Collections.Generic;

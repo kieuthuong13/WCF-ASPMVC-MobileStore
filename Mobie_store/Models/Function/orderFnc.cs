@@ -42,7 +42,7 @@ namespace Mobie_store.Models.Function
 
         public string Address { get; set; }
 
-        public List<order_detail> orderDetail { set; get; }
+        public List<ViewService.order> orderDetail { set; get; }
         
         /// <summary>
         ///  Thực hiện thanh toán hoá đơn + lưu vào database

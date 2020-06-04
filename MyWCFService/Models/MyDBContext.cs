@@ -5,10 +5,10 @@ namespace MyWCFService.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class MyDBContext : DbContext
+    public partial class MyDbContext : DbContext
     {
-        public MyDBContext()
-            : base("name=MyDBContext")
+        public MyDbContext()
+            : base("name=dbContext")
         {
         }
 
@@ -17,8 +17,8 @@ namespace MyWCFService.Models
         public virtual DbSet<comment> comments { get; set; }
         public virtual DbSet<discount> discounts { get; set; }
         public virtual DbSet<image> images { get; set; }
-        public virtual DbSet<order_detail> order_detail { get; set; }
         public virtual DbSet<order> orders { get; set; }
+        public virtual DbSet<order_detail> order_detail { get; set; }
         public virtual DbSet<post> posts { get; set; }
         public virtual DbSet<product> products { get; set; }
         public virtual DbSet<review> reviews { get; set; }
@@ -60,16 +60,16 @@ namespace MyWCFService.Models
                 .Property(e => e.url)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<order>()
+                .Property(e => e.total_money)
+                .IsUnicode(false);
+
             modelBuilder.Entity<order_detail>()
                 .Property(e => e.quantity)
                 .IsUnicode(false);
 
             modelBuilder.Entity<order_detail>()
                 .Property(e => e.money)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<order>()
-                .Property(e => e.total_money)
                 .IsUnicode(false);
 
             modelBuilder.Entity<product>()
@@ -127,7 +127,7 @@ namespace MyWCFService.Models
             modelBuilder.Entity<product>()
                 .Property(e => e.image)
                 .IsUnicode(false);
-            
+
             modelBuilder.Entity<token>()
                 .Property(e => e.value)
                 .IsUnicode(false);

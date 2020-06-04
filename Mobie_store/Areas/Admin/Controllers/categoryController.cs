@@ -64,6 +64,8 @@ namespace Mobie_store.Areas.Admin.Controllers
                 Session["token"] as string,
                 (Session["admin"] as Mobie_store.ViewService.admin).id,
                 id);
+
+
             return true;
         }
 

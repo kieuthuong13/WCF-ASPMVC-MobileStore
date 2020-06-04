@@ -4,8 +4,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using MyWCFService.Models.Entity;
 using System.Data.Entity.Migrations;
+using MyWCFService.Models.Entity;
 
 namespace MyWCFService.api
 {
@@ -13,12 +13,12 @@ namespace MyWCFService.api
     // NOTE: In order to launch WCF Test Client for testing this service, please select AddService.svc or AddService.svc.cs at the Solution Explorer and start debugging.
     public class AddService : IAddService
     {
-        private static DbStore db = new DbStore();
+        private static dbContext db = new dbContext();
 
         #region MyFunction
         public int ID_Return(string nametable)
         {
-            return db.Database.SqlQuery<int>("SELECT TOP 1 MAX(id) FROM " + nametable + " GROUP BY id ORDER BY id DESC").FirstOrDefault() + 1;
+            return db.Database.SqlQuery<int>("SELECT TOP 1 MAX(id) FROM dbo.[" + nametable + "] GROUP BY id ORDER BY id DESC").FirstOrDefault() + 1;
         }
         #endregion
 
@@ -314,7 +314,7 @@ namespace MyWCFService.api
         {
             try
             {
-                if (db.utokens.Where(m => m.value.Equals(utoken) && m.user_id.Equals(_user_id)) != null)
+                if (db.utokens.Any(m => m.value == utoken && m.user_id == _user_id))
                 {
                     db.order_detail.Add(new order_detail()
                     {

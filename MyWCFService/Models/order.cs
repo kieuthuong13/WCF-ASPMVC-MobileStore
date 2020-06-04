@@ -6,8 +6,10 @@ namespace MyWCFService.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Table("order")]
     public partial class order
     {
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 

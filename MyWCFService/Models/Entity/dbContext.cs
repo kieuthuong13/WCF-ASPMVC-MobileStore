@@ -5,10 +5,10 @@ namespace MyWCFService.Models.Entity
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class DbStore : DbContext
+    public partial class dbContext : DbContext
     {
-        public DbStore()
-            : base("name=DbStore")
+        public dbContext()
+            : base("name=dbContext")
         {
         }
 
@@ -17,8 +17,8 @@ namespace MyWCFService.Models.Entity
         public virtual DbSet<comment> comments { get; set; }
         public virtual DbSet<discount> discounts { get; set; }
         public virtual DbSet<image> images { get; set; }
-        public virtual DbSet<order_detail> order_detail { get; set; }
         public virtual DbSet<order> orders { get; set; }
+        public virtual DbSet<order_detail> order_detail { get; set; }
         public virtual DbSet<post> posts { get; set; }
         public virtual DbSet<product> products { get; set; }
         public virtual DbSet<review> reviews { get; set; }
@@ -53,6 +53,11 @@ namespace MyWCFService.Models.Entity
                 .WithOptional(e => e.admin)
                 .HasForeignKey(e => e.admin_id);
 
+            modelBuilder.Entity<category>()
+                .HasMany(e => e.products)
+                .WithOptional(e => e.category)
+                .HasForeignKey(e => e.product_cate_id);
+
             modelBuilder.Entity<discount>()
                 .Property(e => e.value)
                 .IsUnicode(false);
@@ -61,16 +66,13 @@ namespace MyWCFService.Models.Entity
                 .Property(e => e.name)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<discount>()
+                .HasMany(e => e.products)
+                .WithOptional(e => e.discount)
+                .HasForeignKey(e => e.discount_id);
+
             modelBuilder.Entity<image>()
                 .Property(e => e.url)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<order_detail>()
-                .Property(e => e.quantity)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<order_detail>()
-                .Property(e => e.money)
                 .IsUnicode(false);
 
             modelBuilder.Entity<order>()
@@ -82,6 +84,14 @@ namespace MyWCFService.Models.Entity
                 .WithRequired(e => e.order)
                 .HasForeignKey(e => e.order_id)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<order_detail>()
+                .Property(e => e.quantity)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<order_detail>()
+                .Property(e => e.money)
+                .IsUnicode(false);
 
             modelBuilder.Entity<product>()
                 .Property(e => e.sku)

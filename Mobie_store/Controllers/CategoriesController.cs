@@ -13,7 +13,11 @@ namespace Mobie_store.Controllers
         public ActionResult Product(int id)
         {
             ViewServiceClient db = new ViewServiceClient();
-            List<product> product = db.Get_product(0).ToList();
+            var litem = db.Get_product(0);
+            if (litem == null)
+                return View();
+
+            List<product> product = litem.ToList();
             return View(product.Where(m => m.product_cate_id == id));
         }
     }

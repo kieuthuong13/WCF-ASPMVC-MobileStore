@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using MyWCFService.Models;
+using MyWCFService.Models.Entity;
 
 namespace MyWCFService.api
 {
@@ -12,7 +12,7 @@ namespace MyWCFService.api
     // NOTE: In order to launch WCF Test Client for testing this service, please select DeleteService.svc or DeleteService.svc.cs at the Solution Explorer and start debugging.
     public class DeleteService : IDeleteService
     {
-        private MyDBContext db = new MyDBContext();
+        private dbContext db = new dbContext();
         public string Delete_admin(string token, int admin_id, int id)
         {
             try
@@ -58,7 +58,7 @@ namespace MyWCFService.api
                     | db.utokens.Where(m => m.user_id.Equals(user_id) && m.value.Equals(utoken)) != null &&
                         db.comments.Where(m => m.id.Equals(id) && m.users_id.Equals(user_id)) != null)
                 {
-                    db.Database.ExecuteSqlCommand("DELETE FROM comments WHERE id = " + id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM comment WHERE id = " + id);
                     db.SaveChanges();
                     return "Delete record success!";
                 }
@@ -122,7 +122,7 @@ namespace MyWCFService.api
                     }
                     
                     db.Database.ExecuteSqlCommand("DELETE FROM order_detail WHERE order_id = " + id);
-                    db.Database.ExecuteSqlCommand("DELETE FROM orders WHERE id = " + id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM dbo.[order] WHERE id = " + id);
                     db.SaveChanges();
                     return "Delete record success!";
                 }
@@ -140,7 +140,7 @@ namespace MyWCFService.api
             {
                 if (db.tokens.Where(m => m.value.Equals(token) && m.admin_id.Equals(admin_id)) != null)
                 {
-                    db.Database.ExecuteSqlCommand("DELETE FROM posts WHERE id = " + id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM post WHERE id = " + id);
                     db.SaveChanges();
                     return "Delete record success!";
                 }
@@ -158,13 +158,13 @@ namespace MyWCFService.api
             {
                 if (db.tokens.Where(m => m.value.Equals(token) && m.admin_id.Equals(admin_id)) != null)
                 {
-                    db.Database.ExecuteSqlCommand("DELETE FROM posts WHERE product_id = " + id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM post WHERE product_id = " + id);
                     db.Database.ExecuteSqlCommand("DELETE FROM order_detail WHERE product_id = " + id);
-                    db.Database.ExecuteSqlCommand("DELETE FROM comments WHERE product_id = " + id);
-                    db.Database.ExecuteSqlCommand("DELETE FROM reviews WHERE product_id = " + id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM comment WHERE product_id = " + id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM review WHERE product_id = " + id);
                     db.Database.ExecuteSqlCommand("DELETE FROM image WHERE product_id = " + id);
 
-                    db.Database.ExecuteSqlCommand("DELETE FROM products WHERE id = " + id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM product WHERE id = " + id);
                     db.SaveChanges();
                     return "Delete record success!";
                 }
@@ -184,7 +184,7 @@ namespace MyWCFService.api
                     | db.utokens.Where(m => m.user_id.Equals(user_id) && m.value.Equals(utoken)) != null &&
                         db.reviews.Where(m => m.id.Equals(id) && m.users_id.Equals(user_id)) != null)
                 {
-                    db.Database.ExecuteSqlCommand("DELETE FROM reviews WHERE id = " + id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM review WHERE id = " + id);
                     db.SaveChanges();
                     return "Delete record success!";
                 }
@@ -204,8 +204,8 @@ namespace MyWCFService.api
                     | db.utokens.Where(m => m.user_id.Equals(user_id) && m.value.Equals(utoken)) != null)
                 {
                     db.Database.ExecuteSqlCommand("DELETE FROM utoken WHERE user_id = " + user_id);
-                    db.Database.ExecuteSqlCommand("DELETE FROM comments WHERE users_id = " + user_id);
-                    db.Database.ExecuteSqlCommand("DELETE FROM reviews WHERE users_id = " + user_id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM comment WHERE users_id = " + user_id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM review WHERE users_id = " + user_id);
 
                     List<order> lorder = db.orders.Where(m => m.users_id == user_id).ToList();
                     foreach (order item in lorder)
@@ -213,8 +213,8 @@ namespace MyWCFService.api
                         db.Database.ExecuteSqlCommand("DELETE FROM order_detail WHERE order_id = " + item.id);
                     }
 
-                    db.Database.ExecuteSqlCommand("DELETE FROM orders WHERE users_id = " + user_id);
-                    db.Database.ExecuteSqlCommand("DELETE FROM users WHERE id = " + user_id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM dbo.[order] WHERE users_id = " + user_id);
+                    db.Database.ExecuteSqlCommand("DELETE FROM user WHERE id = " + user_id);
                     db.SaveChanges();
                     return "Delete record success!";
                 }

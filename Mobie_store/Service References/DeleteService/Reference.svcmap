@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b8ba2a82-2cd7-4432-9e01-f7715e3b7aa2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2e4f18c4-d454-4332-8368-2ac81366ecaf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:58365/api/DeleteService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DeleteService.xsd" MetadataType="Schema" ID="722dbe3d-2f95-4d12-a65e-84655768f17a" SourceId="1" SourceUrl="http://localhost:58365/api/DeleteService.svc?xsd=xsd0" />
-    <MetadataFile FileName="DeleteService1.xsd" MetadataType="Schema" ID="7fb0586e-fae7-49ee-8d58-c094eba3d63c" SourceId="1" SourceUrl="http://localhost:58365/api/DeleteService.svc?xsd=xsd1" />
-    <MetadataFile FileName="DeleteService.disco" MetadataType="Disco" ID="464bc8a9-2c74-4b5e-b1e4-c6ba3835ac4c" SourceId="1" SourceUrl="http://localhost:58365/api/DeleteService.svc?disco" />
-    <MetadataFile FileName="DeleteService.wsdl" MetadataType="Wsdl" ID="95a8aef7-d78f-4dda-b325-96f1da05a27d" SourceId="1" SourceUrl="http://localhost:58365/api/DeleteService.svc?wsdl" />
+    <MetadataFile FileName="DeleteService.xsd" MetadataType="Schema" ID="62f9e78c-70da-435f-937c-ef143247d67a" SourceId="1" SourceUrl="http://localhost:58365/api/DeleteService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DeleteService1.xsd" MetadataType="Schema" ID="655ca7ea-3c3c-403b-a97c-b28c0b9862c0" SourceId="1" SourceUrl="http://localhost:58365/api/DeleteService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DeleteService.disco" MetadataType="Disco" ID="08bd6718-0daf-406e-b707-36ad5f294e3e" SourceId="1" SourceUrl="http://localhost:58365/api/DeleteService.svc?disco" />
+    <MetadataFile FileName="DeleteService.wsdl" MetadataType="Wsdl" ID="4936934b-fdf6-4bc9-a9ea-72ae3d78b1a0" SourceId="1" SourceUrl="http://localhost:58365/api/DeleteService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

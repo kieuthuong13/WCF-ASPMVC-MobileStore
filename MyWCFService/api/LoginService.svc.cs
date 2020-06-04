@@ -13,12 +13,12 @@ namespace MyWCFService.api
     // NOTE: In order to launch WCF Test Client for testing this service, please select LoginService.svc or LoginService.svc.cs at the Solution Explorer and start debugging.
     public class LoginService : ILoginService
     {
-        private DbStore db = new DbStore();
+        private dbContext db = new dbContext();
         private MyWCFService.api.AddService addSV = new AddService();
 
         public string LoginAdmin(string email, string password, out int id)
         {
-            var ad = db.admins.Where(m => m.email.Equals(email) && m.pwd.Equals(password)).FirstOrDefault();
+            var ad = db.admins.FirstOrDefault(m => m.email == email && m.pwd == password);
             if (ad != null)
             {
                 string token = Hash.CreateToken();
@@ -28,6 +28,7 @@ namespace MyWCFService.api
                     admin_id = ad.id,
                     value = token
                 });
+                db.SaveChanges();
                 id = ad.id;
                 return token;
             }
@@ -37,16 +38,17 @@ namespace MyWCFService.api
 
         public string LoginUser(string username, string password, out int id)
         {
-            var user = db.users.Where(m => m.username.Equals(username) && m.pwd.Equals(password)).FirstOrDefault();
+            var user = db.users.FirstOrDefault(m => m.username == username && m.pwd == password);
             if (user != null)
             {
                 string token = Hash.CreateToken();
                 db.utokens.Add(new utoken()
                 {
-                    id = addSV.ID_Return("token"),
+                    id = addSV.ID_Return("utoken"),
                     user_id = user.id,
                     value = token
                 });
+                db.SaveChanges();
                 id = user.id;
                 return token;
             }
@@ -61,17 +63,17 @@ namespace MyWCFService.api
                 {
                     case "admin":
                         // login by email
-                        var adm = db.admins.Where(m => m.email.Equals(nameLogin)).FirstOrDefault();
-                        if (db.tokens.Where(m => m.admin_id.Equals(adm.id) && m.value.Equals(oldToken)) != null)
+                        var adm = db.admins.FirstOrDefault(m => m.email.Equals(nameLogin));
+                        if (db.tokens.Where(m => m.admin_id.Equals(adm.id) && m.value == oldToken) != null)
                         {
                             db.Database.ExecuteSqlCommand("DELETE token WHERE admin_id = " + adm.id);
                             db.SaveChanges();
                         }
                         return "Delete token success!";
-                    case "users":
+                    case "user":
                         // login by username
-                        var user = db.users.Where(m => m.username.Equals(nameLogin)).FirstOrDefault();
-                        if (db.utokens.Where(m => m.user_id.Equals(user.id) && m.value.Equals(oldToken)) != null)
+                        var user = db.users.FirstOrDefault(m => m.username.Equals(nameLogin));
+                        if (db.utokens.Where(m => m.user_id.Equals(user.id) && m.value == oldToken) != null)
                         {
                             db.Database.ExecuteSqlCommand("DELETE utoken WHERE user_id = " + user.id);
                             db.SaveChanges();

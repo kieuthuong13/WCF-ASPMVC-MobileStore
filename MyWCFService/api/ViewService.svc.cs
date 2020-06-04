@@ -12,7 +12,7 @@ namespace MyWCFService.api
     // NOTE: In order to launch WCF Test Client for testing this service, please select ViewService.svc or ViewService.svc.cs at the Solution Explorer and start debugging.
     public class ViewService : IViewService
     {
-        private static MyDBContext db = new MyDBContext();
+        private static MyDbContext db = new MyDbContext();
         
         public admin[] Get_admin(string token, int admin_id, int id)
         {
@@ -60,10 +60,7 @@ namespace MyWCFService.api
                         return db.orders.Where(m => m.id.Equals(id)).ToArray();
                 }
             }
-            catch (Exception)
-            {
-                
-            }
+            catch (Exception) { }
             return null;
         }
 
@@ -91,16 +88,16 @@ namespace MyWCFService.api
 
         public user[] Get_user(string utoken, int id, int? admin_id = null)
         {
-            if (db.utokens.Where(m => m.value.Equals(utoken) && m.user_id.Equals(id)) != null
-                | db.tokens.Where(m => m.value.Equals(utoken) && m.admin_id.Equals(admin_id)) != null)
+            if (db.utokens.Where(m => m.value == utoken && m.user_id.Equals(id)) != null
+                | db.tokens.Where(m => m.value == utoken && m.admin_id.Equals(admin_id)) != null)
                 return MyClass<user>.GetData("user", id);
             return null;
         }
 
         public utoken[] Get_utoken(string utoken, int user_id, int id)
         {
-            if(db.utokens.Where(m => m.value.Equals(utoken) && m.user_id.Equals(user_id)) != null
-                | db.tokens.Where(m => m.value.Equals(utoken) && m.admin_id.Equals(user_id)) != null)
+            if(db.utokens.Where(m => m.value == utoken && m.user_id.Equals(user_id)) != null
+                | db.tokens.Where(m => m.value == utoken && m.admin_id.Equals(user_id)) != null)
                 return MyClass<utoken>.GetData("utoken", id);
             return null;
         }
@@ -117,80 +114,80 @@ namespace MyWCFService.api
                             if (id == 0)
                                 return db.admins.Cast<T>().ToArray();
                             else if (id > 0)
-                                return (from m in db.admins where m.id == id select m).Cast<T>().ToArray();
+                                return db.admins.Where(m => m.id == id).Cast<T>().ToArray();
                             break;
                         case "category":
                             if (id == 0)
                                 return db.categories.Cast<T>().ToArray();
                             else if (id > 0)
-                                return (from m in db.categories where m.id == id select m).Cast<T>().ToArray();
+                                return db.categories.Where(m => m.id == id).Cast<T>().ToArray();
                             break;
                         case "comment":
                             if (id == 0)
                                 return db.comments.Cast<T>().ToArray();
                             else if (id > 0)
-                                return (from m in db.comments where m.id == id select m).Cast<T>().ToArray();
+                                return db.comments.Where(m => m.id == id).Cast<T>().ToArray();
                             break;
                         case "discount":
                             if (id == 0)
                                 return db.discounts.Cast<T>().ToArray();
                             else if (id > 0)
-                                return (from m in db.discounts where m.id == id select m).Cast<T>().ToArray();
+                                return db.discounts.Where(m => m.id == id).Cast<T>().ToArray();
                             break;
                         case "image":
                             if (id == 0)
                                 return db.images.Cast<T>().ToArray();
                             else if (id > 0)
-                                return (from m in db.images where m.id == id select m).Cast<T>().ToArray();
+                                return db.images.Where(m => m.id == id).Cast<T>().ToArray();
                             break;
                         case "order":
                             if (id == 0)
                                 return db.orders.Cast<T>().ToArray();
                             else if (id > 0)
-                                return (from m in db.orders where m.id == id select m).Cast<T>().ToArray();
+                                return db.orders.Where(m => m.id == id).Cast<T>().ToArray();
                             break;
                         case "post":
                             if (id == 0)
                                 return db.posts.Cast<T>().ToArray();
                             else if (id > 0)
-                                return (from m in db.posts where m.id == id select m).Cast<T>().ToArray();
+                                return db.posts.Where(m => m.id == id).Cast<T>().ToArray();
                             break;
                         case "product":
                             if (id == 0)
                                 return db.products.OrderByDescending(m => m.follow).Cast<T>().ToArray();
                             else if (id > 0)
                             {
-                                product record = db.products.Where(m => m.id == id).FirstOrDefault();
+                                product record = db.products.FirstOrDefault(m => m.id == id);
                                 record.follow = record.follow == null ? 1 : record.follow + 1;
                                 if(record != null)
                                     db.SaveChanges();
 
-                                return (from m in db.products where m.id == id select m).Cast<T>().ToArray();
+                                return db.products.Where(m => m.id == id).Cast<T>().ToArray();
                             }
                             break;
                         case "review":
                             if (id == 0)
                                 return db.reviews.Cast<T>().ToArray();
                             else if (id > 0)
-                                return (from m in db.reviews where m.id == id select m).Cast<T>().ToArray();
+                                return db.reviews.Where(m => m.id == id).Cast<T>().ToArray();
                             break;
                         case "user":
                             if (id == 0)
                                 return db.users.Cast<T>().ToArray();
                             else if (id > 0)
-                                return (from m in db.users where m.id == id select m).Cast<T>().ToArray();
+                                return db.users.Where(m => m.id == id).Cast<T>().ToArray();
                             break;
                         case "token":
                             if (id == 0)
                                 return db.tokens.Cast<T>().ToArray();
                             else if (id > 0)
-                                return (from m in db.tokens where m.id == id select m).Cast<T>().ToArray();
+                                return db.tokens.Where(m => m.id == id).Cast<T>().ToArray();
                             break;
                         case "utoken":
                             if (id == 0)
                                 return db.utokens.Cast<T>().ToArray();
                             else if (id > 0)
-                                return (from m in db.utokens where m.id == id select m).Cast<T>().ToArray();
+                                return db.utokens.Where(m => m.id == id).Cast<T>().ToArray();
                             break;
                         default:
                             break;

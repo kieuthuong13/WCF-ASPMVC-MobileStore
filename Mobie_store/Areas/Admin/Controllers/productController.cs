@@ -51,7 +51,7 @@ namespace Mobie_store.Areas.Admin.Controllers
                     addSV.Add_product(
                         Session["token"] as string,
                         (Session["admin"] as Mobie_store.ViewService.admin).id,
-                        addSV.ID_Return("products"),
+                        addSV.ID_Return("product"),
                         model.sku,
                         model.name,
                         model.price,
@@ -143,12 +143,14 @@ namespace Mobie_store.Areas.Admin.Controllers
             }
             return st;
         }
-        public bool delete(int id)
+        private bool delete(int id)
         {
+            var token = Session["token"] as string;
+            var idadmin = (Session["admin"] as Mobie_store.ViewService.admin).id;
             // Remove product
             deleteSV.Delete_product(
-                Session["token"] as string,
-                (Session["admin"] as Mobie_store.ViewService.admin).id,
+                token,
+                idadmin,
                 id);
             return true;
         }

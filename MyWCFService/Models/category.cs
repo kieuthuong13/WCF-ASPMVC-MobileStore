@@ -9,6 +9,7 @@ namespace MyWCFService.Models
     [Table("category")]
     public partial class category
     {
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 

@@ -149,11 +149,12 @@
     <Compile Include="Models\admin.cs" />
     <Compile Include="Models\category.cs" />
     <Compile Include="Models\comment.cs" />
+    <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Models\discount.cs" />
     <Compile Include="Models\Entity\admin.cs" />
     <Compile Include="Models\Entity\category.cs" />
     <Compile Include="Models\Entity\comment.cs" />
-    <Compile Include="Models\Entity\DbStore.cs" />
+    <Compile Include="Models\Entity\dbContext.cs" />
     <Compile Include="Models\Entity\discount.cs" />
     <Compile Include="Models\Entity\image.cs" />
     <Compile Include="Models\Entity\order.cs" />
@@ -166,7 +167,6 @@
     <Compile Include="Models\Entity\utoken.cs" />
     <Compile Include="Models\Function\Hash.cs" />
     <Compile Include="Models\image.cs" />
-    <Compile Include="Models\MyDBContext.cs" />
     <Compile Include="Models\order.cs" />
     <Compile Include="Models\order_detail.cs" />
     <Compile Include="Models\post.cs" />

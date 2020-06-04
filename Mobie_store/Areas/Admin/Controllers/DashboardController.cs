@@ -88,7 +88,7 @@ namespace Mobie_store.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (file != null && file.ContentLength > 0 && Session["admin"] != null)
+                if (file != null && file.ContentLength > 0 && Session["admin"] != null) // chỉ khi đăng nhập vào được mới cho phép thêm admin
                 {
                     var filename = Path.GetFileName(file.FileName);
                     var path = Path.Combine(Server.MapPath("~/Upload/Admin"), filename);

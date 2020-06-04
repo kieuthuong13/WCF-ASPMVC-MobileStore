@@ -35,14 +35,17 @@
                             </tr>
                         </tfoot>
                         <tbody>
-                            @{var count = 0;};
                             @{
+                                var count = 0;
                                 var db = new ViewServiceClient().Get_product(0);
                                 foreach (var img in Model)
                                 {
                                     //var _name = db.products.FirstOrDefault(m => m.id == img.product_id).sku;
-                                    var _name = db.Where(m => m.id == img.product_id).FirstOrDefault().sku;
-                                        <tr class="row_@img.id">    
+                                    var obj = db.FirstOrDefault(m => m.id == img.product_id);
+                                    if (obj != null)
+                                    {
+                                        var _name = obj.name;
+                                        <tr class="row_@img.id">
                                             <td>@(++count)</td>
                                             <td>@_name</td>
                                             <td><img src="@img.url" id="img_thumb" style="width: 100px; height: auto;"></td>
@@ -50,8 +53,9 @@
                                                 <a href="#" class="btn btn-simple btn-info btn-icon delete_image_product" data-id="@img.id"><i class="material-icons">clear</i></a>
                                             </td>
                                         </tr>
+                                    }
                                 }
-                             }
+                            }
                         </tbody>
                     </table>
                 </div>

@@ -9,6 +9,12 @@ namespace MyWCFService.Models.Entity
     [Table("category")]
     public partial class category
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public category()
+        {
+            products = new HashSet<product>();
+        }
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 
@@ -17,5 +23,8 @@ namespace MyWCFService.Models.Entity
 
         [StringLength(255)]
         public string description { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<product> products { get; set; }
     }
 }

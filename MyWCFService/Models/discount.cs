@@ -9,6 +9,7 @@ namespace MyWCFService.Models
     [Table("discount")]
     public partial class discount
     {
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 

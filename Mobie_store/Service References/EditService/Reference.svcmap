@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="09c91450-f931-4862-a766-862cb05b93ea" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="932474b4-85e8-4af6-ad17-f394831821f8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:58365/api/EditService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EditService.xsd" MetadataType="Schema" ID="b5591f3e-0fae-4d4f-99c4-95108e744fc3" SourceId="1" SourceUrl="http://localhost:58365/api/EditService.svc?xsd=xsd1" />
-    <MetadataFile FileName="EditService.wsdl" MetadataType="Wsdl" ID="a06d18fb-1f78-43b6-a790-c7a1b050a213" SourceId="1" SourceUrl="http://localhost:58365/api/EditService.svc?wsdl" />
-    <MetadataFile FileName="EditService.disco" MetadataType="Disco" ID="398065f3-f142-4598-b3f0-3f193d434089" SourceId="1" SourceUrl="http://localhost:58365/api/EditService.svc?disco" />
-    <MetadataFile FileName="EditService1.xsd" MetadataType="Schema" ID="1827acb4-9ab0-4555-b5f7-c7e303da222d" SourceId="1" SourceUrl="http://localhost:58365/api/EditService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EditService.xsd" MetadataType="Schema" ID="abda62e9-77b6-4d74-9e24-88ad1cd47fa2" SourceId="1" SourceUrl="http://localhost:58365/api/EditService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EditService.wsdl" MetadataType="Wsdl" ID="14178849-2d20-4edf-814e-2e413b38c178" SourceId="1" SourceUrl="http://localhost:58365/api/EditService.svc?wsdl" />
+    <MetadataFile FileName="EditService.disco" MetadataType="Disco" ID="ac7c2a97-8f9e-40fe-be56-ab9afa4c3e41" SourceId="1" SourceUrl="http://localhost:58365/api/EditService.svc?disco" />
+    <MetadataFile FileName="EditService1.xsd" MetadataType="Schema" ID="08b628f7-00a3-4270-b8ef-4daa43a88b97" SourceId="1" SourceUrl="http://localhost:58365/api/EditService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

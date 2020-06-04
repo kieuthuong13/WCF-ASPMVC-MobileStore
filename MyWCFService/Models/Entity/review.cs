@@ -6,6 +6,7 @@ namespace MyWCFService.Models.Entity
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+    [Table("review")]
     public partial class review
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

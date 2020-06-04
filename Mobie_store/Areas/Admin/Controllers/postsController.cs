@@ -33,7 +33,7 @@ namespace Mobie_store.Areas.Admin.Controllers
                 addSV.Add_post(
                     Session["token"] as string,
                     (Session["admin"] as Mobie_store.ViewService.admin).id,
-                    addSV.ID_Return("posts"),
+                    addSV.ID_Return("post"),
                     obj.product_id,
                     obj.name,
                     obj.descripton);

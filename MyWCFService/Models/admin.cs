@@ -9,6 +9,7 @@ namespace MyWCFService.Models
     [Table("admin")]
     public partial class admin
     {
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 
