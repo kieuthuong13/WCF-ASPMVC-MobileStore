@@ -74,7 +74,7 @@ namespace Mobie_store.Controllers
 
                     var pwd = Hash.EncMD5(obj.pwd);
                     // them nguoi dung
-                    addSV.Add_user(addSV.ID_Return("users"), obj.username, obj.fullname, pwd, obj.email, obj.address, 
+                    addSV.Add_user(addSV.ID_Return("user"), obj.username, obj.fullname, pwd, obj.email, obj.address, 
                         obj.phone, "/Upload/Users/" + Hash.EncMD5(filename) + _ex, 1);
                     
                     ViewBag.HtmlStr = "<div class=\"alert alert-info alert-with-icon col-md-6 col-md-offset-3\" data-notify=\"container\"><i class=\"material-icons\" data-notify=\"icon\">notifications</i><button type = \"button\" aria-hidden=\"true\" class=\"close\"><i class=\"material-icons\">close</i></button><span data-notify=\"message\">Insert Complete!.</span></div>";
